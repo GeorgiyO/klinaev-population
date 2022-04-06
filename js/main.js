@@ -49,7 +49,8 @@ function getMatrix() {
   console.log(zar *
               m.newIlls.at(-1) *
               m.healthy.at(-1));
-  while (m.disabled.at(-1) > 0) {
+  let i = 0;
+  while (i++ < 100 && m.disabled.at(-1) > 0) {
     m.newIlls.push(
       Math.round(
         zar *
